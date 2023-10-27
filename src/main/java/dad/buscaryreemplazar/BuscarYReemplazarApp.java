@@ -49,6 +49,8 @@ public class BuscarYReemplazarApp extends Application {
 		GridPane checkboxPane = new GridPane();
 		checkboxPane.addRow(0, mayusMinusCheckbox, buscarHaciaAtrasCheckbox);
 		checkboxPane.addRow(1, expresionRegularCheckbox, resaltarCheckbox);
+		checkboxPane.setVgap(5);
+		checkboxPane.setHgap(5);
 		
 		GridPane tablePane = new GridPane();
 		tablePane.setGridLinesVisible(false);
@@ -60,13 +62,13 @@ public class BuscarYReemplazarApp extends Application {
 		tablePane.setHgap(5);
 		
 		
-		
 		ColumnConstraints [] columns = {
 				new ColumnConstraints(),	
 				new ColumnConstraints(),	
 			};
 		tablePane.getColumnConstraints().setAll(columns);
 		columns[1].setHgrow(Priority.ALWAYS);
+		
 		
 		
 		BorderPane root = new BorderPane();

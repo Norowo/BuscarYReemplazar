@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -50,7 +51,7 @@ public class BuscarYReemplazarApp extends Application {
 		checkboxPane.addRow(1, expresionRegularCheckbox, resaltarCheckbox);
 		
 		GridPane tablePane = new GridPane();
-		tablePane.setGridLinesVisible(true);
+		tablePane.setGridLinesVisible(false);
 		tablePane.addRow(0, new Label("Buscar:"), buscarText);
 		tablePane.addRow(1, new Label("Reemplazar con:"), reemplazarText);
 		tablePane.addRow(2, new Label(""), checkboxPane);
@@ -72,7 +73,7 @@ public class BuscarYReemplazarApp extends Application {
 		root.setLeft(tablePane);
 		root.setRight(botonesVBox);
 		
-		primaryStage.setScene(new Scene(root, 800, 200));
+		primaryStage.setScene(new Scene(root, Control.USE_PREF_SIZE, 200));
 		primaryStage.show();
 		
 		

@@ -66,13 +66,14 @@ public class BuscarYReemplazarApp extends Application {
 				new ColumnConstraints(),	
 				new ColumnConstraints(),	
 			};
+		
 		tablePane.getColumnConstraints().setAll(columns);
 		columns[1].setHgrow(Priority.ALWAYS);
 		
 		
 		
 		BorderPane root = new BorderPane();
-		root.setLeft(tablePane);
+		root.setCenter(tablePane);
 		root.setRight(botonesVBox);
 		
 		primaryStage.setScene(new Scene(root, Control.USE_PREF_SIZE, 200));
